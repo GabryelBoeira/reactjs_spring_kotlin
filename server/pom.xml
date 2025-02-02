@@ -5,14 +5,16 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.0</version>
+		<version>3.2.12</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>br.com.erudio</groupId>
 	<artifactId>rest-with-spring-boot-and-kotlin-erudio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rest-with-spring-boot-and-kotlin-erudio</name>
 	<description>Demo project for Spring Boot</description>
+
 	<properties>
 		<java.version>20</java.version>
 		<kotlin.version>1.9.10</kotlin.version>
@@ -22,6 +24,7 @@
 		<rest-assured.version>4.5.0</rest-assured.version>
 		<java-jwt.version>3.18.3</java-jwt.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -163,7 +166,7 @@
 				<configuration>
 					<url>jdbc:mysql://localhost:3306/react_with_spring_boot_and_kotlin?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
 					<user>root</user>
-					<password>admin123</password>
+					<password>root</password>
 				</configuration>
 				<dependencies>
 					<dependency>
