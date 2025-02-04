@@ -18,7 +18,7 @@
 - Kotlin;
 - Api RESTful
 - Spring Boot;
-- (Postman)[https://github.com/GabryelBoeira/reactjs_spring_kotlin/tree/main/Collections];
+- Postman: [Arquivo de importação dos endpoints](https://github.com/GabryelBoeira/reactjs_spring_kotlin/tree/main/Collections);
 - IntelliJ IDEA;
 - Swagger (Open API);
 - MySQL;
