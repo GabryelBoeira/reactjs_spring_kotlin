@@ -1,0 +1,39 @@
+# Arquivos e pastas do Node.js
+node_modules/
+package-lock.json
+npm-debug.log
+.env
+
+# Arquivos e pastas do React.js
+build/
+.next/
+public/build/
+node_modules/
+
+# Arquivos e pastas do VS Code
+.vscode/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.iws
+
+# Arquivos e pastas gerais
+.cache/
+.tmp/
+*.log
+*.lock
+*.swp
+*~
+# Arquivos de sistema
+Thumbs.db
+desktop.ini
+
+# Arquivos de configuração
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore arquivos específicos, se necessário
