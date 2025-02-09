@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 
 export default function App() {
-  return <Header title="Cliente REST Udemy" />;
+  const [counter, setCounter] = useState(0);
+
+  function increment() {
+    setCounter(counter + 1);
+  }
+
+  return (
+    <div>
+      <Header>Contador: {counter}</Header>
+      <button onClick={increment}> add </button>
+    </div>
+  );
 }
