@@ -1,7 +1,6 @@
 import React from "react";
+import Header from "./Header";
 
-function App() {
-  return <h1>Customizando a aplicacao</h1>;
+export default function App() {
+  return <Header title="Cliente REST Udemy" />;
 }
-
-export default App;
