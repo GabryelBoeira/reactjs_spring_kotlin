@@ -3,7 +3,7 @@ import "./styles.css";
 import logo from "../../assets/logo.svg";
 import padlock from "../../assets/padlock.png";
 
-export default function login() {
+export default function Login() {
   return (
     <div className="login-container">
       <section className="from">
