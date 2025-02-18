@@ -1,5 +1,5 @@
 import React from "react";
-//import "./styles.css";
+import "./styles.css";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 import { FiPower } from "react-icons/fi";
