@@ -10,7 +10,7 @@ export default function Book() {
       <header>
         <img src={logo} alt="logo" />
         <span>
-          Welcome <strong>Usuario</strong>
+          Welcome <strong>Usuario</strong>!
         </span>
         <Link className="button" to="book/new">
           Add New Book
