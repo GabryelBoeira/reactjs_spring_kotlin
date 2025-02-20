@@ -2,5 +2,10 @@
   "username": "Usuário",
   "access-app": "Acesse sua conta",
   "password": "Senha",
-  "login": "Entrar"
+  "login": "Entrar",
+  "book-list-register": "Livros Cadastrados",
+  "title": "Título",
+  "author": "Autor",
+  "price": "Preço",
+  "release-date": "Data de Lançamento"
 }

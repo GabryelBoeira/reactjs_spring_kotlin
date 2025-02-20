@@ -2,5 +2,10 @@
   "username": "Username",
   "access-app": "Access your Account",
   "password": "Password",
-  "login": "Login"
+  "login": "Login",
+  "book-list-register": "Registered Books",
+  "title": "Title",
+  "author": "Author",
+  "price": "Price",
+  "release-date": "Release Date"
 }
