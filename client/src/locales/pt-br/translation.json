@@ -7,5 +7,7 @@
   "title": "Título",
   "author": "Autor",
   "price": "Preço",
-  "release-date": "Data de Lançamento"
+  "release-date": "Data de Lançamento",
+  "welcome": "Bem Vindo",
+  "add-book": "Adicionar novo Livro"
 }

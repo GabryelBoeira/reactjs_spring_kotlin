@@ -7,5 +7,7 @@
   "title": "Title",
   "author": "Author",
   "price": "Price",
-  "release-date": "Release Date"
+  "release-date": "Release Date",
+  "welcome": "Welcome",
+  "add-book": "Add New Book"
 }
