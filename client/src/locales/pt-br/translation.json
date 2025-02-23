@@ -13,5 +13,6 @@
   "register-new-book": "Cadastrar novo Livro",
   "add-new-book-message": "Informe os dados do livro e clique em 'adicionar'!",
   "back": "Voltar",
-  "register": "Adicionar"
+  "register": "Adicionar",
+  "login-failed": "Falha no login! Por favor, verifique suas credenciais."
 }
