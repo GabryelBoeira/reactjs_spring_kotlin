@@ -10,6 +10,8 @@ security:
       secret-key: 53cr37
       expire-length: 3600000
 spring:
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
