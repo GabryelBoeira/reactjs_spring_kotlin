@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FiPower, FiEdit, FiTrash2 } from "react-icons/fi";
 import getTranslation from "../../i18n.js";
 
-export default function Book() {
+export default function Books() {
   return (
     <div className="book-container">
       <header>

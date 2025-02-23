@@ -9,5 +9,8 @@
   "price": "Price",
   "release-date": "Release Date",
   "welcome": "Welcome",
-  "add-book": "Add New Book"
+  "add-book": "Add New Book",
+  "register-new-book": "Register New Book",
+  "add-new-book-message": "Enter the book information and click on 'add'!",
+  "back-home": "Back"
 }

@@ -9,5 +9,9 @@
   "price": "Preço",
   "release-date": "Data de Lançamento",
   "welcome": "Bem Vindo",
-  "add-book": "Adicionar novo Livro"
+  "add-book": "Adicionar novo Livro",
+  "register-new-book": "Cadastrar novo Livro",
+  "add-new-book-message": "Informe os dados do livro e clique em 'adicionar'!",
+  "back-home": "Voltar",
+  "register": "Adicionar"
 }
