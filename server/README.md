@@ -43,3 +43,4 @@ Este guia detalha os comandos para compilar, construir a imagem Docker e executa
 - O arquivo docker-compose.yml deve estar no mesmo diretório que o Dockerfile.
 - O nome da imagem (rest-react-kotlin-server) usado no comando docker build deve corresponder ao nome do serviço definido no arquivo docker-compose.yml.
 - Se você tiver alguma dúvida sobre os comandos ou sobre o processo de criação de imagens Docker, consulte a documentação oficial do Docker e do Docker Compose.
+- Apos o docker-compose up -d, acesse http://localhost:8080/swagger-ui/index.html#/
