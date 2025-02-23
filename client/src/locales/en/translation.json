@@ -12,5 +12,6 @@
   "add-book": "Add New Book",
   "register-new-book": "Register New Book",
   "add-new-book-message": "Enter the book information and click on 'add'!",
-  "back-home": "Back"
+  "back": "Back",
+  "register": "Register"
 }

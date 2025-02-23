@@ -12,6 +12,6 @@
   "add-book": "Adicionar novo Livro",
   "register-new-book": "Cadastrar novo Livro",
   "add-new-book-message": "Informe os dados do livro e clique em 'adicionar'!",
-  "back-home": "Voltar",
+  "back": "Voltar",
   "register": "Adicionar"
 }

@@ -16,16 +16,16 @@ export default function NewBook() {
           <Link className="back-link" to="/books">
             <FiArrowLeft size={16} color="#251fc5" /> {getTranslation("back")}
           </Link>
-          <form>
-            <input placeholder={getTranslation("title")} />
-            <input placeholder={getTranslation("author")} />
-            <input placeholder={getTranslation("price")} />
-            <input placeholder={getTranslation("release-date")} type="date" />
-            <button className="button" type="submit">
-              {getTranslation("register")}
-            </button>
-          </form>
         </section>
+        <form>
+          <input placeholder={getTranslation("title")} />
+          <input placeholder={getTranslation("author")} />
+          <input placeholder={getTranslation("price")} />
+          <input placeholder={getTranslation("release-date")} type="date" />
+          <button className="button" type="submit">
+            {getTranslation("register")}
+          </button>
+        </form>
       </div>
     </div>
   );
