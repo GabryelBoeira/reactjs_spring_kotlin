@@ -14,5 +14,6 @@
   "add-new-book-message": "Informe os dados do livro e clique em 'adicionar'!",
   "back": "Voltar",
   "register": "Adicionar",
-  "login-failed": "Falha no login! Por favor, verifique suas credenciais."
+  "login-failed": "Falha no login! Por favor, verifique suas credenciais.",
+  "new-book-failed": "Falha ao cadastrar novo livro! Por favor, verifique as informações."
 }

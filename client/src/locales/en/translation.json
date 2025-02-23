@@ -14,5 +14,6 @@
   "add-new-book-message": "Enter the book information and click on 'add'!",
   "back": "Back",
   "register": "Register",
-  "login-failed": "Login failed! Please check your credentials."
+  "login-failed": "Login failed! Please check your credentials.",
+  "new-book-failed": "Failed to register new book! Please check the information."
 }
