@@ -9,7 +9,7 @@ import api from "../../services/api.js";
 export default function NewBook() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState("");
   const [launchDate, setLaunchDate] = useState("");
   const history = useHistory();
   const accessToken = localStorage.getItem("accessToken");
@@ -29,7 +29,7 @@ export default function NewBook() {
       await api.post("/api/book/v1", data, authorization);
       history.push("/books");
     } catch (err) {
-      alert(getTranslation("login-failed"));
+      alert(getTranslation("new-book-failed"));
     }
   }
 
