@@ -15,5 +15,7 @@
   "back": "Back",
   "register": "Register",
   "login-failed": "Login failed! Please check your credentials.",
-  "new-book-failed": "Failed to register new book! Please check the information."
+  "new-book-failed": "Failed to register new book! Please check the information.",
+  "delete-book-failed": "Failed to delete book! Please try again.",
+  "logout-failed": "Failed to logout! Please try again."
 }

@@ -15,5 +15,7 @@
   "back": "Voltar",
   "register": "Adicionar",
   "login-failed": "Falha no login! Por favor, verifique suas credenciais.",
-  "new-book-failed": "Falha ao cadastrar novo livro! Por favor, verifique as informações."
+  "new-book-failed": "Falha ao cadastrar novo livro! Por favor, verifique as informações.",
+  "delete-book-failed": "Falha ao deletar livro! Por favor, tente novamente.",
+  "logout-failed": "Falha ao sair! Por favor, tente novamente."
 }

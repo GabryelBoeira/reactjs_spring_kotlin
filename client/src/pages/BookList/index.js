@@ -6,9 +6,9 @@ import { FiPower, FiEdit, FiTrash2 } from "react-icons/fi";
 import getTranslation from "../../i18n.js";
 import { useHistory } from "react-router-dom";
 import api from "../../services/api.js";
-import fecha from "fecha";
 
 export default function Books() {
+  // ?page=0&limit=4&direction=asc
   const [books, setBooks] = useState([]);
 
   const history = useHistory();
@@ -17,10 +17,30 @@ export default function Books() {
   const authorization = { headers: { Authorization: `Bearer ${accessToken}` } };
 
   useEffect(() => {
-    api.get("/api/book/v1", authorization).then((response) => {
-      setBooks(response.data._embedded.bookVOes);
-    });
+    api
+      .get("/api/book/v1?page=0&limit=4&direction=asc", authorization)
+      .then((response) => {
+        setBooks(response.data._embedded.bookVOes);
+      });
   }, [accessToken]);
+
+  async function handleDeleteBook(id) {
+    try {
+      await api.delete(`api/book/v1/${id}`, authorization);
+      setBooks(books.filter((book) => book.id !== id));
+    } catch (err) {
+      alert(getTranslation("delete-book-failed"));
+    }
+  }
+
+  async function handleLogout() {
+    try {
+      localStorage.clear();
+      history.push("/");
+    } catch (err) {
+      alert(getTranslation("logout-failed"));
+    }
+  }
 
   return (
     <div className="book-container">
@@ -32,7 +52,7 @@ export default function Books() {
         <Link className="button" to="book/new">
           {getTranslation("add-book")}
         </Link>
-        <button type="button">
+        <button type="button" onClick={handleLogout}>
           <FiPower size={18} color="#251fc5" />
         </button>
       </header>
@@ -59,7 +79,7 @@ export default function Books() {
             <button type="button">
               <FiEdit size={20} color="#251fc5" />
             </button>
-            <button type="button">
+            <button type="button" onClick={() => handleDeleteBook(book.id)}>
               <FiTrash2 size={20} color="#251fc5" />
             </button>
           </li>
