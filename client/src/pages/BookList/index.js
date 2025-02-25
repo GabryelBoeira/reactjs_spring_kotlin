@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 import api from "../../services/api.js";
 
 export default function Books() {
-  // ?page=0&limit=4&direction=asc
   const [books, setBooks] = useState([]);
 
   const history = useHistory();
@@ -33,6 +32,14 @@ export default function Books() {
     }
   }
 
+  async function handleEditBook(id) {
+    try {
+      history.push(`/book/new/${id}`);
+    } catch (err) {
+      alert(getTranslation("edit-book-failed"));
+    }
+  }
+
   async function handleLogout() {
     try {
       localStorage.clear();
@@ -49,7 +56,7 @@ export default function Books() {
         <span>
           {getTranslation("welcome")} <strong>{username.toUpperCase()}</strong>!
         </span>
-        <Link className="button" to="book/new">
+        <Link className="button" to="book/new/0">
           {getTranslation("add-book")}
         </Link>
         <button type="button" onClick={handleLogout}>
@@ -76,7 +83,7 @@ export default function Books() {
             <p>
               {Intl.DateTimeFormat("pt-BR").format(new Date(book.launchDate))}
             </p>
-            <button type="button">
+            <button type="button" onClick={() => handleEditBook(book.id)}>
               <FiEdit size={20} color="#251fc5" />
             </button>
             <button type="button" onClick={() => handleDeleteBook(book.id)}>

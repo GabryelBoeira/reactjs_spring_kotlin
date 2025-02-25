@@ -11,6 +11,7 @@ export default function Routes() {
         <Route path="/" exact component={Login} />
         <Route path="/books" component={Books} />
         <Route path="/book/new" component={NewBook} />
+        <Route path="/book/new/:bookId" component={NewBook} />
       </Switch>
     </BrowserRouter>
   );
