@@ -15,10 +15,16 @@
 
 - React JS;
 - Axios;
+- Docker;
 - Kotlin;
 - Api RESTful
 - Spring Boot;
-- Postman: [Arquivo de importação dos endpoints](https://github.com/GabryelBoeira/reactjs_spring_kotlin/tree/main/Collections);
+- Postman: Arquivo com as Collections [acesse](https://github.com/GabryelBoeira/reactjs_spring_kotlin/tree/main/Collections);
 - IntelliJ IDEA;
 - Swagger (Open API);
 - MySQL;
+- Documentação de Implementação do Projeto [Docker](https://github.com/GabryelBoeira/reactjs_spring_kotlin/blob/main/server/README.md)
+
+## Certificado de Conclusão:
+
+**Certificado Udemy:** [acessar](https://www.udemy.com/certificate/UC-8219fe16-3dfc-4e13-b727-0fdf5d4a64a1/)
