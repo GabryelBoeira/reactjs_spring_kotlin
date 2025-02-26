@@ -20,5 +20,8 @@
   "logout-failed": "Failed to logout! Please try again.",
   "update-book-failed": "Failed to update book! Please check the information.",
   "edit-book": "Edit Book",
-  "edit-book-message": "Enter the new information and click on 'update'!"
+  "edit-book-message": "Enter the new information and click on 'update'!",
+  "load-more": "Load More",
+  "loading-book": "Loading...",
+  "no-more-books": "No more books to load"
 }

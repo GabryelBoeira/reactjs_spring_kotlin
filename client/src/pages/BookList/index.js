@@ -9,6 +9,9 @@ import api from "../../services/api.js";
 
 export default function Books() {
   const [books, setBooks] = useState([]);
+  const [page, setPage] = useState(0);
+  const [hasMore, setHasMore] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
   const username = localStorage.getItem("username");
@@ -16,12 +19,53 @@ export default function Books() {
   const authorization = { headers: { Authorization: `Bearer ${accessToken}` } };
 
   useEffect(() => {
-    api
-      .get("/api/book/v1?page=0&limit=4&direction=asc", authorization)
-      .then((response) => {
+    async function initialLoad() {
+      setLoading(true); // Define o estado de carregamento como verdadeiro
+      const response = await api.get(
+        `/api/book/v1?page=${page}&limit=4&direction=asc`,
+        authorization,
+      );
+
+      if (
+        response.data._embedded &&
+        response.data._embedded.bookVOes.length > 0
+      ) {
         setBooks(response.data._embedded.bookVOes);
-      });
-  }, [accessToken]);
+        setPage(page + 1);
+      } else {
+        setHasMore(false); // Define hasMore como falso se não houver mais livros
+      }
+      setLoading(false); // Define o estado de carregamento como falso
+    }
+    initialLoad();
+  }, []);
+
+  async function loadMoreBooks() {
+    if (!hasMore || loading) return;
+
+    setLoading(true); // Define o estado de carregamento como verdadeiro
+    try {
+      const response = await api.get(
+        `/api/book/v1?page=${page}&limit=4&direction=asc`,
+        authorization,
+      );
+
+      if (
+        response.data._embedded &&
+        response.data._embedded.bookVOes.length > 0
+      ) {
+        setBooks([...books, ...response.data._embedded.bookVOes]);
+        setPage(page + 1);
+      } else {
+        setHasMore(false); // Define hasMore como falso se não houver mais livros
+      }
+    } catch (error) {
+      console.error("Erro ao carregar mais livros:", error);
+      // Trate o erro de forma apropriada, como exibir uma mensagem para o usuário
+    } finally {
+      setLoading(false); // Define o estado de carregamento como falso, independentemente do resultado da requisição
+    }
+  }
 
   async function handleDeleteBook(id) {
     try {
@@ -92,6 +136,22 @@ export default function Books() {
           </li>
         ))}
       </ul>
+      <footer>
+        {
+          <button
+            type="button"
+            className="button"
+            disabled={!hasMore}
+            onClick={loadMoreBooks}
+          >
+            {loading
+              ? getTranslation("loading-book")
+              : hasMore
+              ? getTranslation("load-more")
+              : getTranslation("no-more-books")}
+          </button>
+        }
+      </footer>
     </div>
   );
 }

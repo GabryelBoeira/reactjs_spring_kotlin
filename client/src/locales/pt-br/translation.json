@@ -20,5 +20,8 @@
   "logout-failed": "Falha ao sair! Por favor, tente novamente.",
   "update-book-failed": "Falha ao atualizar livro! Por favor, verifique as informações.",
   "edit-book": "Editar Livro",
-  "edit-book-message": "Informe as novas informações e clique em 'atualizar'!"
+  "edit-book-message": "Informe as novas informações e clique em 'atualizar'!",
+  "load-more": "Carregar Mais",
+  "loading-book": "Carregando...",
+  "no-more-books": "Não há mais livros para carregar"
 }
