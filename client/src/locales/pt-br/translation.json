@@ -17,5 +17,8 @@
   "login-failed": "Falha no login! Por favor, verifique suas credenciais.",
   "new-book-failed": "Falha ao cadastrar novo livro! Por favor, verifique as informações.",
   "delete-book-failed": "Falha ao deletar livro! Por favor, tente novamente.",
-  "logout-failed": "Falha ao sair! Por favor, tente novamente."
+  "logout-failed": "Falha ao sair! Por favor, tente novamente.",
+  "update-book-failed": "Falha ao atualizar livro! Por favor, verifique as informações.",
+  "edit-book": "Editar Livro",
+  "edit-book-message": "Informe as novas informações e clique em 'atualizar'!"
 }

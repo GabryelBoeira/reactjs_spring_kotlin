@@ -4,13 +4,13 @@ import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 import { FiPower, FiEdit, FiTrash2 } from "react-icons/fi";
 import getTranslation from "../../i18n.js";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import api from "../../services/api.js";
 
 export default function Books() {
   const [books, setBooks] = useState([]);
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const username = localStorage.getItem("username");
   const accessToken = localStorage.getItem("accessToken");
   const authorization = { headers: { Authorization: `Bearer ${accessToken}` } };
@@ -34,7 +34,7 @@ export default function Books() {
 
   async function handleEditBook(id) {
     try {
-      history.push(`/book/new/${id}`);
+      navigate(`/book/new/${id}`);
     } catch (err) {
       alert(getTranslation("edit-book-failed"));
     }
@@ -43,7 +43,7 @@ export default function Books() {
   async function handleLogout() {
     try {
       localStorage.clear();
-      history.push("/");
+      navigate("/");
     } catch (err) {
       alert(getTranslation("logout-failed"));
     }
@@ -56,7 +56,7 @@ export default function Books() {
         <span>
           {getTranslation("welcome")} <strong>{username.toUpperCase()}</strong>!
         </span>
-        <Link className="button" to="book/new/0">
+        <Link className="button" to="/book/new/0">
           {getTranslation("add-book")}
         </Link>
         <button type="button" onClick={handleLogout}>

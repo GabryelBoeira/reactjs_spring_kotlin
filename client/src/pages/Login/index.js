@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./styles.css";
 import api from "../../services/api";
@@ -10,7 +10,7 @@ import getTranslation from "../../i18n.js";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   async function handleLogin(e) {
     e.preventDefault();
@@ -26,7 +26,7 @@ export default function Login() {
       localStorage.setItem("accessToken", response.data.accessToken);
       localStorage.setItem("refreshToken", response.data.refreshToken);
 
-      history.push("/books");
+      navigate("/books");
     } catch (err) {
       alert(getTranslation("login-failed"));
     }
