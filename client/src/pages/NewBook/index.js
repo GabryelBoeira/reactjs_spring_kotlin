@@ -39,7 +39,7 @@ export default function NewBook() {
     }
   };
 
-  async function createNewBook(e) {
+  async function saveOrUpdate(e) {
     e.preventDefault();
 
     const data = {
@@ -81,7 +81,7 @@ export default function NewBook() {
             <FiArrowLeft size={16} color="#251fc5" /> {getTranslation("back")}
           </Link>
         </section>
-        <form onSubmit={createNewBook}>
+        <form onSubmit={saveOrUpdate}>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
