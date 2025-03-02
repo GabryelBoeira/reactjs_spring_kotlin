@@ -93,17 +93,28 @@ export default function Books() {
     }
   }
 
+  async function handleUser() {
+    try {
+      navigate("/user");
+    } catch (err) {
+      alert(getTranslation("user-failed"));
+    }
+  }
+
   return (
     <div className="book-container">
       <header>
         <img src={logo} alt="logo" />
-        <span>
-          {getTranslation("welcome")} <strong>{username.toUpperCase()}</strong>!
-        </span>
-        <Link className="button" to="/book/new/0">
+        <button className="button-user" type="button" onClick={handleUser}>
+          <span>
+            {getTranslation("welcome")}
+            <strong> {username.toUpperCase()}</strong>!
+          </span>
+        </button>
+        <Link className="button-action" to="/book/new/0">
           {getTranslation("add-book")}
         </Link>
-        <button type="button" onClick={handleLogout}>
+        <button className="button" type="button" onClick={handleLogout}>
           <FiPower size={18} color="#251fc5" />
         </button>
       </header>

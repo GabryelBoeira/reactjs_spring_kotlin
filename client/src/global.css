@@ -33,7 +33,7 @@ form input {
   margin-top: 16px;
 }
 
-.button {
+.button-action {
   width: 100%;
   height: 60px;
   background: #251fc5;
@@ -50,6 +50,6 @@ form input {
   transition: filter 0.3s;
 }
 
-.button:hover {
+.button-action:hover {
   filter: brightness(80%);
 }

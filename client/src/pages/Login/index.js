@@ -50,7 +50,7 @@ export default function Login() {
             type="password"
             placeholder={getTranslation("password")}
           />
-          <button className="button" type="submit">
+          <button className="button-action" type="submit">
             {getTranslation("login")}
           </button>
         </form>

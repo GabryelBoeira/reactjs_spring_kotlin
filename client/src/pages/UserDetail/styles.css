@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+  .new-book-container .content section,
+  .new-book-container .content .info-column {
+    width: 100%; /* Stack columns on smaller screens */
+    margin-bottom: 30px; /* Add spacing between stacked columns */
+  }
+}
+
+.user-container {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.user-container header {
+  display: flex;
+  align-items: center;
+}
+
+.user-container header h1 strong {
+  color: #251fc5;
+}

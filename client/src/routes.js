@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Books from "./pages/BookList";
 import NewBook from "./pages/NewBook";
 import NotFound from "./pages/NotFound";
+import UserDetail from "./pages/UserDetail";
 
 export default function RoutesList() {
   return (
@@ -13,6 +14,7 @@ export default function RoutesList() {
         <Route path="/books" element={<Books />} />
         <Route path="/book/new" element={<NewBook />} />
         <Route path="/book/new/:bookId" element={<NewBook />} />
+        <Route path="/user" element={<UserDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

@@ -103,7 +103,7 @@ export default function NewBook() {
             placeholder={getTranslation("release-date")}
             type="date"
           />
-          <button className="button" type="submit">
+          <button className="button-action" type="submit">
             {getTranslation("register")}
           </button>
         </form>
